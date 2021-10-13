@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-                 git 'https://github.com/sagarchavhan1/devops.git'
+                  git 'https://github.com/sagarchavhan1/studentapp-ui.git'
             }
         }
         stage('Built') { 
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                // 
+                sh 'mvn clean package'
             }
         }
     }
